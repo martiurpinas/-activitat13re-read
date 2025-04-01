@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     background-color: #ffffff;
     display: grid;
     grid-template-areas:
@@ -17,10 +17,10 @@ body {
     grid-area: header;
     background-color: #004d40;
     color: white;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 1.5rem;
-    font-weight: bold;
+    text-align: left;
+    padding: 1rem ;
+    font-size: 1rem;
+    padding: 10px 15px;
 }
 
 .menu a {
