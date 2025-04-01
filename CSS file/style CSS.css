@@ -17,10 +17,15 @@ body {
     grid-area: header;
     background-color: #004d40;
     color: white;
-    text-align: left;
-    padding: 1rem ;
-    font-size: 1rem;
+    text-align: left; /* Alinea el texto a la izquierda */
     padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.container {
+    text-align: center; /* Centra el texto en la sección principal */
+    padding: 30px;
 }
 
 .menu {
