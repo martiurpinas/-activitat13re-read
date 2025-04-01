@@ -23,6 +23,12 @@ body {
     padding: 10px 15px;
 }
 
+.menu {
+    display: flex;
+    padding: 10px;
+    border-bottom: 3px solid #cc6633;
+}
+ 
 .menu a {
     text-decoration: none;
     padding: 10px;
