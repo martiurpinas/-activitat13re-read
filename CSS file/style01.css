@@ -1,39 +1,28 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    background-color: #ffffff;
-    display: grid;
-    grid-template-areas:
-        "header"
-        "menu"
-        "main"
-        "sidebar";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
 }
 
 .header {
-    grid-area: header;
-    background-color: #004d40;
+    background-color: #0a3d2e;
     color: white;
-    text-align: left; /* Alinea el texto a la izquierda */
-    padding: 10px 15px;
-    font-size: 1rem;
+    padding: 10px 20px;
     font-weight: bold;
 }
 
 .container {
-    text-align: center; /* Centra el texto en la sección principal */
+    text-align: center;
     padding: 30px;
 }
 
 .menu {
     display: flex;
     padding: 10px;
-    border-bottom: 3px solid #cc6633;
+    border-bottom: 2px solid #cc6633;
 }
- 
+
 .menu a {
     text-decoration: none;
     padding: 10px;
@@ -50,6 +39,11 @@ body {
     max-width: 800px;
     margin: auto;
     text-align: left;
+}
+
+.pricing {
+    text-align: center;
+    margin: 20px 0;
 }
 
 .sidebar {
