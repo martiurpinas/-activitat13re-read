@@ -15,6 +15,7 @@ body {
 .container {
     text-align: center;
     padding: 30px;
+    margin-right: 20px; /* Ajusta el margen derecho */
 }
 
 .menu {
@@ -39,6 +40,7 @@ body {
     max-width: 800px;
     margin: auto;
     text-align: left;
+    margin-right: 20px; /* Ajusta el margen derecho */
 }
 
 .pricing {
@@ -64,12 +66,44 @@ body {
 .seccion2 {
     /*Poner  a la izquierda*/
     float: left;
+    margin-right: 20px; /* Ajusta el margen derecho */
 }
 
 .sidebar1 {
     /*Poner a la derecha*/
     float: right;
     text-align: left;
+    margin-right: 20px; /* Ajusta el margen derecho */
+}
+
+.ebooks {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.ebooks .row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: flex-start; /* Alinea las filas más a la derecha */
+}
+
+.ebook-item {
+    text-align: center;
+    max-width: 150px;
+}
+
+.ebook-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ebook-item p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
 }
 
 /* responsive */
@@ -94,6 +128,14 @@ body {
     .pricing img {
         max-width: 30%;
         height: auto;
+    }
+
+    .ebooks .row {
+        flex-wrap: wrap;
+    }
+
+    .ebook-item {
+        max-width: 100%;
     }
     
 }
