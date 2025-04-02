@@ -51,12 +51,49 @@ body {
     padding: 10px;
     color: white;
     max-width: 250px;
-    margin: 20px auto;
+    /* margin: 20px auto; */
 }
 
 .sidebar div {
     background-color: white;
     color: #0a3d2e;
     padding: 10px;
-    margin: 5px 0;
+    /* margin: 5px 0; */
+}
+
+.seccion2 {
+    /*Poner  a la izquierda*/
+    float: left;
+}
+
+.sidebar1 {
+    /*Poner a la derecha*/
+    float: right;
+    text-align: left;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .sidebar, .sidebar1 {
+        max-width: 100%;
+        float: none;
+    }
+    /* mantener las tres imagenes pricing en la misma fila, las tres seguidas */
+    .pricing {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow-x: auto;
+    }
+
+    .pricing img {
+        max-width: 30%;
+        height: auto;
+    }
+    
 }
