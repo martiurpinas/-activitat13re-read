@@ -20,7 +20,7 @@ body {
 .menu {
     display: flex;
     padding: 10px;
-    border-bottom: 2px solid #cc6633;
+    border-bottom: 3px solid #cc6633;
 }
 
 .menu a {
