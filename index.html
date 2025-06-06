@@ -6,34 +6,122 @@
     <title>Re-Read</title>
     <link rel="stylesheet" href="./CSS file/style01.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Extra: ocultar secciones por defecto y mostrar solo la activa */
+        .tab-section { display: none; }
+        .tab-section.active { display: block; }
+    </style>
 </head>
 <body>
     <header class="header">Re-Read</header>
+    <nav class="menu" id="mainMenu">
+        <a href="#" class="active" onclick="showSection('inicio', event)">Re-Read</a>
+        <a href="#" onclick="showSection('libros', event)">Libros</a>
+        <a href="#" onclick="showSection('ebooks', event)">eBooks</a>
+    </nav>
     <main class="container">
-        <section>
+        <!-- INICIO -->
+        <section id="inicio" class="tab-section active">
             <h1>Re-Read</h1>
             <p>En Re-Read podrás encontrar libros de segunda mano en perfecto estado. También vender los tuyos. Porque siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
+            <div class="seccion2">
+                <section class="content">
+                    <h2>Nunca la lectura ha sido tan necesaria</h2>
+                    <p>En estos tiempos difíciles Re-Read se suma al mensaje de #yomequedoencasa por el bien común de la sociedad.</p>
+                    <h2>Reduce & Reuse & Read</h2>
+                    <p>Somos la librería Eco-Friendly – Re-Read nació pensando en verde con el objetivo de compartir una pasión, la lectura y para expresar una preocupación: si queremos construir un futuro sostenible, es necesario que reduzcamos el consumo y que reutilicemos cuantos más objetos materiales mejor.</p>
+                </section>
+            </div>
         </section>
-        <div class="seccion2">
-            <nav class="menu">
-                <a href="./index.html" class="active">Re-Read</a>
-                <a href="./indexx.html">Libros</a>
-                <a href="./indexxx.html">eBooks</a>
-            </nav>
-            <section class="content">
-                <h2>Nunca la lectura ha sido tan necesaria</h2>
-                <p>En estos tiempos difíciles Re-Read se suma al mensaje de #yomequedoencasa por el bien común de la sociedad.</p>
-                <h2>Reduce & Reuse & Read</h2>
-                <p>Somos la librería Eco-Friendly – Re-Read nació pensando en verde con el objetivo de compartir una pasión, la lectura y para expresar una preocupación: si queremos construir un futuro sostenible, es necesario que reduzcamos el consumo y que reutilicemos cuantos más objetos materiales mejor.</p>
-            </section>
-        </div>
+        <!-- LIBROS -->
+        <section id="libros" class="tab-section">
+            <div class="container">
+                <h1>Re-Read</h1>
+                <p>En Re-Read podrás encontrar libros de segunda mano en perfecto estado. También vender los tuyos. Porque siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
+            </div>
+            <div class="seccion2">
+                <nav class="menu">
+                    <a href="#" onclick="showSection('inicio', event)">Re-Read</a>
+                    <a href="#" class="active" onclick="showSection('libros', event)">Libros</a>
+                    <a href="#" onclick="showSection('ebooks', event)">eBooks</a>
+                </nav>
+                <section class="content">
+                    <h2>Todos los libros tienen el mismo precio</h2>
+                    <p>Libros casi nuevos a un precio casi imposible.</p>
+                    <div class="pricing">
+                        <img src="./imagenes/1-libro-3€.gif" alt="Precios de libros">
+                        <img src="./imagenes/2-libros-5€.gif" alt="Precios de libros">
+                        <img src="./imagenes/5-libros-10€.gif" alt="Precios de libros">
+                    </div>
+                    <h2>¿Te cambias de piso? ¿Tienes que vaciar la casa? ¿O sencillamente necesitas algo más de espacio?</h2>
+                    <p>En Re-Read compramos tus libros para darles una segunda vida. Los compramos todos al mismo precio: 0,20 euros. Siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
+                </section>
+            </div>
+        </section>
+        <!-- EBOOKS -->
+        <section id="ebooks" class="tab-section">
+            <div class="container">
+                <h1>Re-Read</h1>
+                <p>En Re-Read podrás encontrar libros de segunda mano en perfecto estado. También vender los tuyos. Porque siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
+            </div>
+            <div class="seccion2">
+                <nav class="menu">
+                    <a href="#" onclick="showSection('inicio', event)">Re-Read</a>
+                    <a href="#" onclick="showSection('libros', event)">Libros</a>
+                    <a href="#" class="active" onclick="showSection('ebooks', event)">eBooks</a>
+                </nav>
+                <section class="content">
+                    <h2>Toda la actualidad en eBook</h2>
+                    <div class="ebooks">
+                        <div class="row">
+                            <div class="ebook-item">
+                                <img src="./imagenes/cell.jpeg" alt="Cell - Stephen King">
+                                <p>Cell - Stephen King</p>
+                            </div>
+                            <div class="ebook-item">
+                                <img src="./imagenes/elciclodelhombrelobo.jpeg" alt="El ciclo del hombre lobo - Stephen King">
+                                <p>El ciclo del hombre lobo - Stephen King</p>
+                            </div>
+                            <div class="ebook-item">
+                                <img src="./imagenes/elresplandor.jpeg" alt="El resplandor - Stephen King">
+                                <p>El resplandor - Stephen King</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="ebook-item">
+                                <img src="./imagenes/doctorsleep.jpeg" alt="Doctor Sueño - Stephen King">
+                                <p>Doctor Sueño - Stephen King</p>
+                            </div>
+                            <div class="ebook-item">
+                                <img src="./imagenes/mientrasescribo.jpeg" alt="Mentiras Escritas - Stephen King">
+                                <p>Mentiras Escritas - Stephen King</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
     </main>
     <aside class="sidebar1">
         <h3>Top ventas</h3>
-            <p class="sidebar">Cien años de soledad.</p>
-            <p class="sidebar">Crónica de una muerte anunciada.</p>
-            <p class="sidebar">El otoño del patriarca.</p>
-            <p class="sidebar">El general en su laberinto.</p>
+        <p class="sidebar">Cien años de soledad.</p>
+        <p class="sidebar">Crónica de una muerte anunciada.</p>
+        <p class="sidebar">El otoño del patriarca.</p>
+        <p class="sidebar">El general en su laberinto.</p>
     </aside>
+    <script>
+        function showSection(sectionId, event) {
+            event.preventDefault();
+            // Oculta todas las secciones
+            document.querySelectorAll('.tab-section').forEach(sec => sec.classList.remove('active'));
+            // Muestra la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+            // Actualiza el menú principal
+            document.querySelectorAll('#mainMenu a').forEach(a => a.classList.remove('active'));
+            if(sectionId === 'inicio') document.querySelectorAll('#mainMenu a')[0].classList.add('active');
+            if(sectionId === 'libros') document.querySelectorAll('#mainMenu a')[1].classList.add('active');
+            if(sectionId === 'ebooks') document.querySelectorAll('#mainMenu a')[2].classList.add('active');
+        }
+    </script>
 </body>
 </html>
