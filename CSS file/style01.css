@@ -21,7 +21,7 @@ body {
 .menu {
     display: flex;
     padding: 10px;
-    border-bottom: 3px solid #cc6633;
+    /* border-bottom: 3px solid #cc6633; */ /* Elimina o comenta esta línea */
 }
 
 .menu a {
@@ -33,6 +33,14 @@ body {
 .menu .active {
     background-color: #cc6633;
     color: white;
+}
+
+.menu .orange-tab {
+    background-color: #ff9800;
+    color: white !important;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
 .content {
