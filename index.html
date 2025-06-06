@@ -10,6 +10,13 @@
         /* Extra: ocultar secciones por defecto y mostrar solo la activa */
         .tab-section { display: none; }
         .tab-section.active { display: block; }
+        .menu .orange-tab {
+            background-color: #ff9800;
+            color: white !important;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -18,12 +25,18 @@
         <a href="#" class="active" onclick="showSection('inicio', event)">Re-Read</a>
         <a href="#" onclick="showSection('libros', event)">Libros</a>
         <a href="#" onclick="showSection('ebooks', event)">eBooks</a>
+        <a href="#" class="orange-tab" onclick="showSection('quees', event)">¿Qué es Re-Read?</a>
     </nav>
     <main class="container">
         <!-- INICIO -->
         <section id="inicio" class="tab-section active">
             <h1>Re-Read</h1>
             <p>En Re-Read podrás encontrar libros de segunda mano en perfecto estado. También vender los tuyos. Porque siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
+                <nav class="menu">
+                    <a href="#" onclick="showSection('inicio', event)">Re-Read</a>
+                    <a href="#" class="active" onclick="showSection('libros', event)">Libros</a>
+                    <a href="#" onclick="showSection('ebooks', event)">eBooks</a>
+                </nav>
             <div class="seccion2">
                 <section class="content">
                     <h2>Nunca la lectura ha sido tan necesaria</h2>
@@ -101,6 +114,12 @@
                 </section>
             </div>
         </section>
+        <!-- NUEVA SECCIÓN ¿Qué es Re-Read? -->
+        <section id="quees" class="tab-section">
+            <div class="container">
+                <h1>¿Qué es Re-Read?</h1>
+            </div>
+        </section>
     </main>
     <aside class="sidebar1">
         <h3>Top ventas</h3>
@@ -117,10 +136,11 @@
             // Muestra la sección seleccionada
             document.getElementById(sectionId).classList.add('active');
             // Actualiza el menú principal
-            document.querySelectorAll('#mainMenu a').forEach(a => a.classList.remove('active'));
+            document.querySelectorAll('#mainMenu a').forEach(a => a.classList.remove('active', 'orange-tab'));
             if(sectionId === 'inicio') document.querySelectorAll('#mainMenu a')[0].classList.add('active');
             if(sectionId === 'libros') document.querySelectorAll('#mainMenu a')[1].classList.add('active');
             if(sectionId === 'ebooks') document.querySelectorAll('#mainMenu a')[2].classList.add('active');
+            if(sectionId === 'quees') document.querySelectorAll('#mainMenu a')[3].classList.add('orange-tab');
         }
     </script>
 </body>
