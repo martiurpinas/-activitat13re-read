@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./CSS file/style01.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Extra: ocultar secciones por defecto y mostrar solo la activa */
         .tab-section { display: none; }
         .tab-section.active { display: block; }
         .menu .orange-tab {
@@ -21,20 +20,12 @@
 </head>
 <body>
     <header class="header">Re-Read</header>
-
-    <nav class="menu" id="mainMenu">
-        <a href="#" class="re-read-tab active" onclick="showSection('inicio', event)">Re-Read</a>
-        <a href="#" class="libros-tab" onclick="showSection('libros', event)">Libros</a>
-        <a href="#" class="ebooks-tab" onclick="showSection('ebooks', event)">eBooks</a>
-        <a href="#" class="orange-tab" onclick="showSection('quees', event)">¿Qué es Re-Read?</a>
-    </nav>
-
     <main class="container">
         <!-- INICIO -->
         <section id="inicio" class="tab-section active">
             <h1>Re-Read</h1>
             <p>En Re-Read podrás encontrar libros de segunda mano en perfecto estado. También vender los tuyos. Porque siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
-            <nav class="menu">
+            <nav class="menu" id="mainMenu">
                 <a href="#" class="re-read-tab active" onclick="showSection('inicio', event)">Re-Read</a>
                 <a href="#" class="libros-tab" onclick="showSection('libros', event)">Libros</a>
                 <a href="#" class="ebooks-tab" onclick="showSection('ebooks', event)">eBooks</a>
@@ -56,7 +47,7 @@
                 <p>En Re-Read podrás encontrar libros de segunda mano en perfecto estado. También vender los tuyos. Porque siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
             </div>
             <div class="seccion2">
-                <nav class="menu">
+                <nav class="menu" id="mainMenu">
                     <a href="#" class="re-read-tab" onclick="showSection('inicio', event)">Re-Read</a>
                     <a href="#" class="libros-tab active" onclick="showSection('libros', event)">Libros</a>
                     <a href="#" class="ebooks-tab" onclick="showSection('ebooks', event)">eBooks</a>
@@ -82,7 +73,7 @@
                 <p>En Re-Read podrás encontrar libros de segunda mano en perfecto estado. También vender los tuyos. Porque siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
             </div>
             <div class="seccion2">
-                <nav class="menu">
+                <nav class="menu" id="mainMenu">
                     <a href="#" class="re-read-tab" onclick="showSection('inicio', event)">Re-Read</a>
                     <a href="#" class="libros-tab" onclick="showSection('libros', event)">Libros</a>
                     <a href="#" class="ebooks-tab active" onclick="showSection('ebooks', event)">eBooks</a>
@@ -123,13 +114,14 @@
         <section id="quees" class="tab-section">
             <div class="container">
                 <h1>¿Qué es Re-Read?</h1>
-                <nav class="menu">
+                <nav class="menu" id="mainMenu">
                     <a href="#" class="re-read-tab" onclick="showSection('inicio', event)">Re-Read</a>
                     <a href="#" class="libros-tab" onclick="showSection('libros', event)">Libros</a>
                     <a href="#" class="ebooks-tab" onclick="showSection('ebooks', event)">eBooks</a>
                     <a href="#" class="orange-tab active" onclick="showSection('quees', event)">¿Qué es Re-Read?</a>
                 </nav>
             </div>
+            <p>“Bienvenidos a "Re-Read", la librería de libros de segunda mano "low-cost" que está revolucionando la forma de leer y compartir historias. En "Re-Read" creemos que la pasión por la lectura no debería tener un precio elevado, por eso ofrecemos una vasta colección de libros en perfecto estado a precios irresistibles. Aquí, cada libro tiene una segunda oportunidad para inspirar, enseñar y entretener, mientras nuestros clientes ahorran y contribuyen a un modelo de consumo más sostenible. Explora nuestras estanterías y descubre tesoros literarios que abarcan todos los géneros y autores, perfectos para lectores ávidos, estudiantes o aquellos que buscan un buen libro sin gastar una fortuna. ¡Ven y redescubre el placer de leer con "Re-Read"!”</p>
         </section>
     </main>
     <aside class="sidebar1">
@@ -142,16 +134,13 @@
     <script>
         function showSection(sectionId, event) {
             event.preventDefault();
-            // Oculta todas las secciones
             document.querySelectorAll('.tab-section').forEach(sec => sec.classList.remove('active'));
-            // Muestra la sección seleccionada
             document.getElementById(sectionId).classList.add('active');
-            // Actualiza el menú principal
-            document.querySelectorAll('#mainMenu a').forEach(a => a.classList.remove('active', 'orange-tab'));
+            document.querySelectorAll('#mainMenu a').forEach(a => a.classList.remove('active'));
             if(sectionId === 'inicio') document.querySelectorAll('#mainMenu a')[0].classList.add('active');
             if(sectionId === 'libros') document.querySelectorAll('#mainMenu a')[1].classList.add('active');
             if(sectionId === 'ebooks') document.querySelectorAll('#mainMenu a')[2].classList.add('active');
-            if(sectionId === 'quees') document.querySelectorAll('#mainMenu a')[3].classList.add('orange-tab');
+            if(sectionId === 'quees') document.querySelectorAll('#mainMenu a')[3].classList.add('active');
         }
     </script>
 </body>
